@@ -503,6 +503,11 @@ footer {
   .quote-block::before { display: none; }
   footer { flex-direction: column; align-items: flex-start; }
 }
+
+/* ── REDUCED MOTION: respect people who get dizzy or distracted by movement ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
 </style>
 </head>
 <body>

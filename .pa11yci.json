@@ -1,11 +1,18 @@
 {
   "defaults": {
     "standard": "WCAG2AA",
-    "runners": ["axe", "htmlcs"],
+    "runners": [
+      "axe",
+      "htmlcs"
+    ],
     "timeout": 60000,
     "wait": 3000,
     "chromeLaunchConfig": {
-      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--force-prefers-reduced-motion"
+      ]
     }
   },
   "urls": [
