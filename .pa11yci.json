@@ -1,0 +1,20 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe", "htmlcs"],
+    "timeout": 60000,
+    "wait": 3000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    }
+  },
+  "urls": [
+    "https://meyeringn.github.io/",
+    "https://meyeringn.github.io/ballotgap-phl/",
+    "https://meyeringn.github.io/canopy-watch/",
+    "https://meyeringn.github.io/floodrisk-philly/",
+    "https://meyeringn.github.io/climate-refuge-philly/",
+    "https://meyeringn.github.io/plainspeak-policy-explainer/",
+    "https://meyeringn.github.io/transit-carbon-calculator/"
+  ]
+}
