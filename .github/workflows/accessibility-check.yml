@@ -1,4 +1,3 @@
-
 name: Accessibility check
 
 on:
@@ -9,14 +8,16 @@ on:
     - cron: "17 13 * * 1"   # Mondays, 8:17am Eastern (13:17 UTC)
 
 jobs:
-  pa11y:
+  axe:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-      - name: Install pa11y-ci
-        run: npm install -g pa11y-ci
+      - name: Install Playwright and axe-core
+        run: |
+          npm install --no-save playwright@1 @axe-core/playwright@4
+          npx playwright install --with-deps chromium
       - name: Check every live tool
-        run: pa11y-ci --config .pa11yci.json
+        run: node .github/a11y-check.mjs
